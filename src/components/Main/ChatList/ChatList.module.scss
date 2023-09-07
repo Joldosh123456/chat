@@ -1,0 +1,46 @@
+.chat__list {
+  display: flex;
+  margin: 0 0 13px 0;
+  gap: 20px;
+  .user_info {
+    position: relative;
+    border-bottom: 0.2px solid #b1b5bf;
+    padding: 0 18px 0 0;
+ 
+    div {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 10px 0;
+      height: 10px;
+      color: #2b2a29;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    .first_floor {
+      font-size: 18px;
+      .user_name_icon {
+        margin-top: 4px;
+      }
+    }
+    .unread_message {
+      width: 18px;
+      height: 18px;
+      color: #2b2a29;
+      font-size: 11px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      border-radius: 50%;
+      background-color: #fcbdbd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      right: 0px;
+      top: -10px;
+    }
+  }
+}

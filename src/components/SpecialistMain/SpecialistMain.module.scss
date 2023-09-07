@@ -1,0 +1,95 @@
+.main {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  .chat__list {
+    border-right: 0.2px solid #b1b5bf;
+    height: 641px;
+    padding: 0 15px 0 0;
+    width: 340px;
+    z-index: 10;
+    .chat__list_scroll {
+      padding: 10px 18px 0 0;
+      height: 550px;
+      overflow-y: auto;
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 6px;
+        border: 0.7px solid #2b2a29;
+        background: #fdf3be;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: #e8e8e8;
+        height: 550px;
+      }
+    }
+
+    .chat__list_buttons {
+      height: 45px;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 0 16px 0;
+      .chat__list_button {
+        height: 42px;
+        border: 1px solid #b1b5bf;
+        border-radius: 10px;
+        color: #b1b5bf;
+        text-align: center;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding: 0 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+      .selectedButton {
+        background-color: #f5f0b2;
+        color: #2b2a29;
+      }
+    }
+    .search {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      margin-bottom: 25px;
+      .search__input {
+        height: 50px;
+        width: 360px;
+        padding: 0 10px;
+        border-radius: 10px;
+        border: 0.5px solid #b1b5bf;
+        background: #fff;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .searching {
+        img {
+          height: 52px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .chat {
+    color: #2b2a29;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
