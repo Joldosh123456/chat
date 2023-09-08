@@ -4,7 +4,6 @@
   margin: 0 auto;
   box-sizing: border-box;
   .chat__list {
-    border-right: 0.2px solid #b1b5bf;
     height: 641px;
     padding: 0 15px 0 0;
     width: 340px;
@@ -46,6 +45,13 @@
         gap: 10px;
       }
       .searching {
+        border-radius: 10px;
+        border: 0.5px solid #b1b5bf;
+        width: 52px;
+        height: 52px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         img {
           height: 52px;
           cursor: pointer;
@@ -57,7 +63,6 @@
   .chat {
     width: 100%;
     padding: 0 14px;
-    border-right: 0.2px solid #b1b5bf;
     .chat__header {
       display: flex;
       border-radius: 10px;
@@ -103,14 +108,20 @@
           font-style: normal;
           font-weight: 400;
           line-height: normal;
-          border: 0.5px solid rgba(191, 187, 177, 0.2);
+          border-radius: 6px;
+          border: 0.5px solid #b1b5bf;
           background-color: #ffffff;
           cursor: pointer;
           opacity: 0.5;
         }
         .active {
-          background-color: #bef6fa;
-          color: #2b2a29;
+          border-radius: 6px;
+          border: 0.5px solid #b1b5bf;
+          background: linear-gradient(
+            90deg,
+            rgba(189, 240, 244, 0.81) 0%,
+            rgba(172, 244, 250, 0.81) 100%
+          );
           opacity: 1;
         }
       }
@@ -133,10 +144,9 @@
           float: left;
           background: #bef6fa;
           padding: 10px;
-          border-top-left-radius: 1em;
-          border-top-right-radius: 1em;
-          //   border-bottom-left-radius: 1em;
-          border-bottom-right-radius: 1em;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+          border-bottom-right-radius: 10px;
           position: relative;
           line-height: 1.5em;
           width: fit-content;
@@ -151,14 +161,16 @@
             width: 1.8em;
             height: 1.8em;
             border: 0px solid white;
-            border-radius: 50%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
             background: white;
           }
 
           &::before {
             border-top: none;
             height: 0.9em;
-            border-radius: 0 0 0 100%/0 0 50% 100%;
+            border-radius: 0 0 0 100%/0 0 0 0;
             background: #bef6fa;
             border-color: #bef6fa;
             margin-left: -0.9em;
@@ -169,10 +181,9 @@
           float: right;
           background: #f5f3b5;
           padding: 10px;
-          border-top-left-radius: 1em;
-          border-top-right-radius: 1em;
-          border-bottom-left-radius: 1em;
-          //   border-bottom-right-radius: 1em;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+          border-bottom-left-radius: 10px;
           position: relative;
           line-height: 1.5em;
           width: fit-content;
@@ -195,7 +206,7 @@
           &::before {
             border-top: none;
             height: 0.9em;
-            border-radius: 0 0 50% 100%/0 0 0 100%;
+            border-radius: 0 0 0 0/0 0 0 100%;
             background: #f5f3b5;
             border-color: #f5f3b5;
             margin-left: -0.9em;
@@ -220,10 +231,10 @@
           float: left;
           background: #e5edf0;
           padding: 10px;
-          border-top-left-radius: 1em;
-          border-top-right-radius: 1em;
-          border-bottom-left-radius: 1em;
-          border-bottom-right-radius: 1em;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
           position: relative;
           line-height: 1.5em;
           width: fit-content;
@@ -232,10 +243,9 @@
           float: left;
           background: #e5edf0;
           padding: 10px;
-          border-top-left-radius: 1em;
-          border-top-right-radius: 1em;
-          //   border-bottom-left-radius: 1em;
-          border-bottom-right-radius: 1em;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+          border-bottom-right-radius: 10px;
           position: relative;
           line-height: 1.5em;
           width: fit-content;
@@ -250,14 +260,16 @@
             width: 1.8em;
             height: 1.8em;
             border: 0px solid white;
-            border-radius: 50%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
             background: white;
           }
 
           &::before {
             border-top: none;
             height: 0.9em;
-            border-radius: 0 0 0 100%/0 0 50% 100%;
+            border-radius: 0 0 0 100%/0 0 0 0;
             background: #e5edf0;
             border-color: #e5edf0;
             margin-left: -0.9em;
@@ -275,16 +287,27 @@
       font-weight: 400;
       line-height: normal;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      gap: 12px;
       input {
         border-radius: 10px;
         border: 0.5px solid #b1b5bf;
         background: #fff;
-        height: 47px;
+        height: 50px;
         width: 80%;
         padding: 0 10px;
+        margin: 0 12px 0 10px;
+      }
+      .sending_message_img {
+        border-radius: 10px;
+        border: 0.5px solid #b1b5bf;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          margin-top: 10px;
+        }
       }
       img {
         cursor: pointer;
