@@ -132,9 +132,10 @@ function Main() {
             </div>
           </div>
 
-          <Image src={stroke} alt="Аватар пользователья" />
 
           {isVisible && (
+            <>
+              <Image src={stroke} alt="Аватар пользователья" />
             <div className={scss.information}>
               <div className={scss.information_header}>
                 <div className={scss.information_header_left}>
@@ -215,7 +216,7 @@ function Main() {
                 </div>
               </div>
             </div>
-          )}
+            </>) }
         </div>
       </div>
     </main>
