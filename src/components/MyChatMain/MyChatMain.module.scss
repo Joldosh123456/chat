@@ -126,8 +126,28 @@
         cursor: pointer;
         width: 20%;
       }
-      .selectedButton {
-        background-color: #f5f0b2;
+      .selectedButton1 {
+        border-radius: 10px;
+        border: 1px solid #b1b5bf;
+        background: linear-gradient(90deg, #f5e9aa 0%, #f5f3b5 100%);
+        color: #2b2a29;
+      }
+      .selectedButton2 {
+        border-radius: 10px;
+        border: 1px solid #b1b5bf;
+        background: linear-gradient(90deg, #f5f3b5 0%, #fffdb9 100%);
+        color: #2b2a29;
+      }
+      .selectedButton3 {
+        border-radius: 10px;
+        border: 1px solid #b1b5bf;
+        background: linear-gradient(90deg, #fffdb9 0%, #def4a1 100%);
+        color: #2b2a29;
+      }
+      .selectedButton4 {
+        border-radius: 10px;
+        border: 1px solid #b1b5bf;
+        background: linear-gradient(90deg, #def4a1 0%, #c6edc0 100%);
         color: #2b2a29;
       }
     }

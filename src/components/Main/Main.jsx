@@ -15,6 +15,7 @@ import reviews_icon from "../../assets/images/reviews_icon.svg";
 import info_location from "../../assets/images/info_location.svg";
 import violation from "../../assets/images/violation.svg";
 import refusal from "../../assets/images/refusal.svg";
+import stroke from "../../assets/images/stroke.svg";
 import Image from "next/image";
 import { ChatListConst } from "../../constants/ChatListConst";
 import { ReviewsListConst } from "@/constants/ReviewsListConst";
@@ -32,7 +33,7 @@ function Main() {
     toggleSwitcher();
   };
 
-    const [isVisible, setVisible] = useState(false)
+  const [isVisible, setVisible] = useState(false);
 
   return (
     <main>
@@ -42,7 +43,12 @@ function Main() {
             <div className={scss.search}>
               <div className={scss.search__input}>
                 <Image src={search_icon} alt="Поиск" />
-                <input type="text" placeholder="Поиск" id="username" name="username" />
+                <input
+                  type="text"
+                  placeholder="Поиск"
+                  id="username"
+                  name="username"
+                />
               </div>
               <div className={scss.searching}>
                 <Image src={searching} alt="Искать" />
@@ -54,6 +60,9 @@ function Main() {
               ))}
             </div>
           </div>
+
+          <Image src={stroke} alt="Аватар пользователья" />
+
           <div className={scss.chat}>
             <div className={scss.chat__header}>
               <Image src={chat_header_icon} alt="Аватар пользователья" />
@@ -66,9 +75,8 @@ function Main() {
                 src={more_icon}
                 alt="Подробнее"
                 className={scss.more_icon}
-              onClick={() => setVisible(!isVisible)}
+                onClick={() => setVisible(!isVisible)}
               />
-             
             </div>
             <div className={scss.in_chat}>
               <div className={scss.in_chat_buttons}>
@@ -118,101 +126,96 @@ function Main() {
             <div className={scss.sending_message}>
               <Image src={attach} alt="Прикрепить" />
               <input type="text" placeholder="Твое сообщение..." />
-              <Image src={sending} alt="Отправить" />
+              <div className={scss.sending_message_img}>
+                <Image src={sending} alt="Отправить" />
+              </div>
             </div>
           </div>
 
-          {
-            isVisible &&
+          <Image src={stroke} alt="Аватар пользователья" />
+
+          {isVisible && (
             <div className={scss.information}>
-            <div className={scss.information_header}>
-              <div className={scss.information_header_left}>
-                <Image src={user_avatar} alt="Аватар специалиста" />
-              </div>
-              <div className={scss.information_header_right}>
-                <div>
-                  <p className={scss.user_name}>Имя специалиста</p>
-                  <Image src={user_name_icon} alt="Аватар специалиста" />
+              <div className={scss.information_header}>
+                <div className={scss.information_header_left}>
+                  <Image src={user_avatar} alt="Аватар специалиста" />
                 </div>
-                <div>
-                  <Image src={star_icon} alt="star_icon" />
-                  4.5
-                  <Image src={ellipse} alt="ellipse" />
-                  <Image src={reviews_icon} alt="reviews_icon" />5 отзывов
-                </div>
-                <div>
-                  <Image src={info_location} alt="info_location" />3 км от тебя
-                </div>
-              </div>
-            </div>
-            <div className={scss.information_items}>
-              <div className={scss.connect}>
-                <div>
-                  <Image src={violation} alt="violation" />
-                  Сообщить о нарушении
-                </div>
-                <div>
-                  <Image src={refusal} alt="refusal" />
-                  Отказаться от специалиста
-                </div>
-              </div>
-              <div className={scss.more_information}>
-                <div className={scss.more_title}>Образование</div>
-                <div className={scss.more_description}>
-                  МГУ — менеджмент — 2010 г.
-                </div>
-
-                <div className={scss.more_title}>Опыт работы</div>
-                <div className={scss.more_description}>
-                  <ul>
-                    <li>ФБР — Репетитор по английскому — 2016-2018 гг.</li>
-                    <li>ФБК — Репетитор по английскому — 2016-2018 гг.</li>
-                  </ul>
-                </div>
-
-                <div className={scss.more_title}>Язык услуг</div>
-                <div className={scss.more_description}>Русский, Английский</div>
-
-                <div className={scss.more_title}>
-                  Минимальная стоимость услуги
-                </div>
-                <div className={scss.more_description}>от 2200 ₽</div>
-
-                <div className={scss.more_title}>О себе</div>
-                <div className={scss.more_description}>
-                  БУБУБУБУУубубудаоааощшаоа
-                </div>
-
-                <div className={scss.more_title}>Фотографии</div>
-                <div className={scss.more_description}>
-                  <div className={scss.photos}>
-                    <div className={scss.photo}></div>
-                    <div className={scss.photo}></div>
-                    <div className={scss.photo}></div>
+                <div className={scss.information_header_right}>
+                  <div>
+                    <p className={scss.user_name}>Имя специалиста</p>
+                    <Image src={user_name_icon} alt="Аватар специалиста" />
+                  </div>
+                  <div>
+                    <Image src={star_icon} alt="star_icon" />
+                    4.5
+                    <Image src={ellipse} alt="ellipse" />
+                    <Image src={reviews_icon} alt="reviews_icon" />5 отзывов
+                  </div>
+                  <div>
+                    <Image src={info_location} alt="info_location" />3 км от
+                    тебя
                   </div>
                 </div>
-
-                <div className={scss.more_title}>Отзывы</div>
-                <div className={scss.more_description}>
-                  {ReviewsListConst.map((e) => (
-                    <ReviewsList key={e.id} {...e} />
-                  ))}
+              </div>
+              <div className={scss.information_items}>
+                <div className={scss.connect}>
+                  <div>
+                    <Image src={violation} alt="violation" />
+                    Сообщить о нарушении
+                  </div>
+                  <div>
+                    <Image src={refusal} alt="refusal" />
+                    Отказаться от специалиста
+                  </div>
                 </div>
+                <div className={scss.more_information}>
+                  <div className={scss.more_title}>Образование</div>
+                  <div className={scss.more_description}>
+                    МГУ — менеджмент — 2010 г.
+                  </div>
 
+                  <div className={scss.more_title}>Опыт работы</div>
+                  <div className={scss.more_description}>
+                    <ul>
+                      <li>ФБР — Репетитор по английскому — 2016-2018 гг.</li>
+                      <li>ФБК — Репетитор по английскому — 2016-2018 гг.</li>
+                    </ul>
+                  </div>
 
+                  <div className={scss.more_title}>Язык услуг</div>
+                  <div className={scss.more_description}>
+                    Русский, Английский
+                  </div>
 
+                  <div className={scss.more_title}>
+                    Минимальная стоимость услуги
+                  </div>
+                  <div className={scss.more_description}>от 2200 ₽</div>
 
-                
+                  <div className={scss.more_title}>О себе</div>
+                  <div className={scss.more_description}>
+                    БУБУБУБУУубубудаоааощшаоа
+                  </div>
+
+                  <div className={scss.more_title}>Фотографии</div>
+                  <div className={scss.more_description}>
+                    <div className={scss.photos}>
+                      <div className={scss.photo}></div>
+                      <div className={scss.photo}></div>
+                      <div className={scss.photo}></div>
+                    </div>
+                  </div>
+
+                  <div className={scss.more_title}>Отзывы</div>
+                  <div className={scss.more_description}>
+                    {ReviewsListConst.map((e) => (
+                      <ReviewsList key={e.id} {...e} />
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          }
-
-
-
-
-
-
+          )}
         </div>
       </div>
     </main>

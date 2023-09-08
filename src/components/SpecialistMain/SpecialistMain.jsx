@@ -24,7 +24,7 @@ function SpecialistMain() {
             <div className={scss.chat__list_buttons}>
               <div
                 className={`${scss.chat__list_button} ${
-                  selectedButton === "Предложения" ? scss.selectedButton : ""
+                  selectedButton === "Предложения" ? scss.selectedButton1 : ""
                 }`}
                 onClick={() => handleButtonClick("Предложения")}
               >
@@ -32,7 +32,7 @@ function SpecialistMain() {
               </div>
               <div
                 className={`${scss.chat__list_button} ${
-                  selectedButton === "Открытые" ? scss.selectedButton : ""
+                  selectedButton === "Открытые" ? scss.selectedButton2 : ""
                 }`}
                 onClick={() => handleButtonClick("Открытые")}
               >
@@ -40,7 +40,7 @@ function SpecialistMain() {
               </div>
               <div
                 className={`${scss.chat__list_button} ${
-                  selectedButton === "Выполненные" ? scss.selectedButton : ""
+                  selectedButton === "Выполненные" ? scss.selectedButton3 : ""
                 }`}
                 onClick={() => handleButtonClick("Выполненные")}
               >
@@ -48,7 +48,7 @@ function SpecialistMain() {
               </div>
               <div
                 className={`${scss.chat__list_button} ${
-                  selectedButton === "Архив" ? scss.selectedButton : ""
+                  selectedButton === "Архив" ? scss.selectedButton4 : ""
                 }`}
                 onClick={() => handleButtonClick("Архив")}
               >
