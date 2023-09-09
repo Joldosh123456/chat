@@ -8,6 +8,7 @@ import review_icon from "../../../assets/images/reviews_icon.svg";
 import location_icon from "../../../assets/images/location_icon.svg";
 import message_icon from "../../../assets/images/message_icon.svg";
 import ellipse from "../../../assets/images/ellipse.svg";
+import strokes from "../../../assets/images/strokes.svg";
 
 function ChatList({
   id,
@@ -47,10 +48,12 @@ function ChatList({
           <Image src={message_icon} alt="message_icon" />
           <p>{last_message}</p>
         </div>
+      <Image src={strokes} alt="strokes" className={scss.strokes} />
         <div className={scss.unread_message}>
             <p>1</p>
         </div>
       </div>
+
     </div>
   );
 }

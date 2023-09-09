@@ -2,10 +2,10 @@
   display: flex;
   margin: 0 0 13px 0;
   gap: 20px;
+
   .user_info {
     position: relative;
-    border-bottom: 0.2px solid #b1b5bf;
-    // padding: 0 px 0 0;
+ 
  
     div {
       display: flex;
@@ -39,7 +39,7 @@
       justify-content: center;
       align-items: center;
       position: absolute;
-      right: -20px;
+      right: 0px;
       top: -10px;
     }
   }
