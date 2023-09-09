@@ -15,10 +15,9 @@ import detail_btn from "../../assets/images/detail_btn.svg";
 import edit_btn from "../../assets/images/edit_btn.svg";
 import delete_btn from "../../assets/images/delete_btn.svg";
 import stroke_chat from "../../assets/images/stroke_chat.svg";
-
 import Image from "next/image";
 import { ChatListConst } from "../../constants/ChatListConst";
-import ChatList from "../Main/ChatList/ChatList";
+import ChatListMy from "./ChatListMy/ChatListMy";
 
 function MyChatMain() {
   const [selectedButton, setSelectedButton] = useState(null);
@@ -142,9 +141,14 @@ function MyChatMain() {
               </div>
             </div>
             <div className={scss.chat__list_scroll}>
-              {ChatListConst.map((item) => (
-                <ChatList key={item.id} {...item} />
-              ))}
+              {/* {ChatListConst.map((item) => (
+                
+              ))} */}
+              {
+                ChatListConst.map((item) => (
+                  <ChatListMy key={item.id} {...item}/>
+                ))
+              }
             </div>
           </div>
         </div>
