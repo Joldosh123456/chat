@@ -278,6 +278,7 @@
       }
     }
     .sending_message {
+      border: 1px solid red;
       width: 100%;
       align-self: flex-end;
       color: #b1b5bf;
@@ -293,7 +294,7 @@
         border: 0.5px solid #b1b5bf;
         background: #fff;
         height: 50px;
-        width: 80%;
+        width: 100%;
         padding: 0 10px;
         margin: 0 12px 0 10px;
       }
