@@ -37,8 +37,8 @@
         padding: 0 10px;
         width: 274px;
         border-radius: 10px;
-        border: 0.5px solid #B1B5BF;
-        background: #FFF;
+        border: 0.5px solid #b1b5bf;
+        background: #fff;
         margin: 0;
         display: flex;
         align-items: center;
@@ -307,7 +307,9 @@
         align-items: center;
         justify-content: center;
         img {
-          margin-top: 10px;
+          margin: 10px 10px 0 10px;
+          width: 43px;
+          height: 24px;
         }
       }
       img {
