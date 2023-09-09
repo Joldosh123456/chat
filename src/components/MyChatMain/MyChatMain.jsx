@@ -14,6 +14,7 @@ import work_view from "../../assets/images/work_view.svg";
 import detail_btn from "../../assets/images/detail_btn.svg";
 import edit_btn from "../../assets/images/edit_btn.svg";
 import delete_btn from "../../assets/images/delete_btn.svg";
+import stroke_chat from "../../assets/images/stroke_chat.svg";
 
 import Image from "next/image";
 import { ChatListConst } from "../../constants/ChatListConst";
@@ -74,7 +75,9 @@ function MyChatMain() {
                   </div>
                 </div>
               </div>
+
             </div>
+              <Image src={stroke_chat} alt="stroke_chat" className={scss.stroke_chat} />
 
             <div className={scss.work}>
               <Image src={work2} alt="Название заказа" />

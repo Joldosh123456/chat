@@ -13,13 +13,15 @@
       gap: 21px;
       margin-bottom: 35px;
     }
+    .stroke_chat {
+      margin: 0 0 10px 10px;
+    }
 
     .new__work {
-      margin-bottom: 21px;
-      border-bottom: 1px solid #b1b5bf;
       padding: 0 0 17px 0;
       display: flex;
       gap: 14px;
+
       .new__work_left {
         position: relative;
         width: 45px;
@@ -90,13 +92,14 @@
       padding: 10px 18px 0 0;
       height: 550px;
       overflow-y: auto;
+
       &::-webkit-scrollbar {
         width: 6px;
       }
       &::-webkit-scrollbar-thumb {
         border-radius: 6px;
-        border: 0.7px solid #2b2a29;
-        background: #fdf3be;
+        border: 0.7px solid #2B2A29;
+        background: #FCBDEA;
       }
       &::-webkit-scrollbar-track {
         background-color: #e8e8e8;
@@ -113,9 +116,9 @@
         height: 42px;
         border: 1px solid #b1b5bf;
         border-radius: 10px;
-        color: #b1b5bf;
+        color: #B1B5BF;
         text-align: center;
-        font-size: 12px;
+        font-size: 15px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
@@ -131,24 +134,44 @@
         border: 1px solid #b1b5bf;
         background: linear-gradient(90deg, #f5e9aa 0%, #f5f3b5 100%);
         color: #2b2a29;
+        text-align: center;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
       }
       .selectedButton2 {
         border-radius: 10px;
         border: 1px solid #b1b5bf;
         background: linear-gradient(90deg, #f5f3b5 0%, #fffdb9 100%);
         color: #2b2a29;
+        text-align: center;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
       }
       .selectedButton3 {
         border-radius: 10px;
         border: 1px solid #b1b5bf;
         background: linear-gradient(90deg, #fffdb9 0%, #def4a1 100%);
         color: #2b2a29;
+        text-align: center;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
       }
       .selectedButton4 {
         border-radius: 10px;
         border: 1px solid #b1b5bf;
         background: linear-gradient(90deg, #def4a1 0%, #c6edc0 100%);
         color: #2b2a29;
+        text-align: center;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
       }
     }
     .search {
@@ -159,7 +182,7 @@
       margin-bottom: 25px;
       .search__input {
         height: 50px;
-        width: 360px;
+        width: 100%;
         padding: 0 10px;
         border-radius: 10px;
         border: 0.5px solid #b1b5bf;
@@ -168,6 +191,9 @@
         display: flex;
         align-items: center;
         gap: 10px;
+        input {
+          width: 100%;
+        }
       }
       .searching {
         img {
